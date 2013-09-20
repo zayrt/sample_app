@@ -8,6 +8,7 @@ gem 'rails', '4.0.0'
 gem 'pg', group: :production
 gem 'sqlite3', group: [:development, :test]
 gem 'nokogiri'
+gem 'spork'
 
 group :development do
  gem 'rspec-rails'
