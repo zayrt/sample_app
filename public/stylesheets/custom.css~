@@ -1,0 +1,92 @@
+.container
+{
+    width: 650px;
+}
+
+body
+{
+    background: #cff;
+}
+
+header
+{
+    padding-top: 20px;
+}
+
+header img
+{
+    padding: 0.7em;
+    background: #FF0793;
+}
+
+section
+{
+    margin-top: 1em;
+    font-size: 120%;
+    padding: 20px;
+    background: white;
+}
+
+a 
+{
+    color: #069;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: red;
+    text-decoration: underline;
+}
+
+nav
+{
+    float: right;
+    background-color: silver;
+    padding: 0.7em 0.7em 0em 0.8em;
+    white-space: nowrap;
+}
+
+nav ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li
+{
+    display: inline-block;
+    padding: 0.2em 0;
+}
+
+nav ul li a
+{
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+a.signup_button 
+{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 160px;
+  color: #fff;
+  background: black;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.round 
+{
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px; 
+    border-radius:         10px;
+}
+
+footer
+{
+    margin-top: 10px;
+}

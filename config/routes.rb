@@ -1,5 +1,6 @@
 SampleApp::Application.routes.draw do
   root 'pages#home'
+  #match '/(:action)', to: 'pages', via: 'get'
   match '/contact', to: 'pages#contact', via: 'get'
   match '/about', to: 'pages#about', via: 'get'
   match '/help', to: 'pages#help', via: 'get'
