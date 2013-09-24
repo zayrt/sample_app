@@ -1,6 +1,5 @@
 SampleApp::Application.routes.draw do
   get "users/new"
-  #match '/(:action)', to: 'pages', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
   root 'pages#home'
   match '/contact', to: 'pages#contact', via: 'get'
