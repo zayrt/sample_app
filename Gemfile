@@ -9,6 +9,7 @@ gem 'pg', group: :production
 gem 'sqlite3', group: [:development, :test]
 gem 'nokogiri'
 gem 'spork'
+gem 'bcrypt-ruby', '3.0.1'
 
 group :development do
  gem 'rspec-rails'
