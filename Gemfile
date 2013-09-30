@@ -11,6 +11,7 @@ gem 'nokogiri'
 gem 'spork'
 gem 'bcrypt-ruby', '3.0.1'
 
+
 group :development do
  gem 'rspec-rails'
  gem 'annotate'
@@ -19,6 +20,7 @@ end
 group :test do
  gem 'rspec'
  gem 'webrat'
+ gem 'factory_girl_rails', '4.2.1'
 end
 
 # Use SCSS for stylesheets
