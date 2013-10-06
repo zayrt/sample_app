@@ -2,10 +2,12 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
-	<%= gravatar_for @user %>
-	<%= @user.name %>
-      </h1>
+      <%= gravatar_for @user %>
+      <span class="welcome">Welcome to the Sample App : </span>
+      <span class="pseudo"> <%= @user.name %>!</span> 
+      <p>
+      Voici la liste des membres : 
+      <%= @user_all.join(", ") %> </p>
     </section>
   </aside>
 </div>

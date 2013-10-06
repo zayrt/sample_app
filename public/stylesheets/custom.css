@@ -1,6 +1,6 @@
 h1
 {
-    color: red;
+    color: purple;
     text-decoration: underline;
 }
 
@@ -73,16 +73,16 @@ nav ul li a
 
 a.signup_button 
 {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  text-align: center;
-  width: 160px;
-  color: azur;
-  background: silver;
-  font-size: 150%;
-  font-weight: bold;
-  padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 160px;
+    color: azur;
+    background: silver;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .round 
@@ -127,10 +127,43 @@ aside {
   margin-right: 10px;
 }
 
-input {
-  border: 2px solid blue;
+.form input{
   width: 100%;
-  margin: auto;
-  height: auto !important;
+  border-radius: 10px;
+  background-color: #318CE7;
+  color: white;
 }
 
+.submit input
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    color: #318CE7;
+    background: silver;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#error_explanation
+{
+    color: red;
+}
+
+.welcome
+{
+    font-size: 150%;
+    color: green;
+    background-color: #B4FFA3;
+    border-radius: 8px;
+}
+
+.pseudo
+{
+    font-size: 150%;
+    color: #FF0004;
+    text-decoration: underline;
+}

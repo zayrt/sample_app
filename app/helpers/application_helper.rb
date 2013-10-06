@@ -7,4 +7,13 @@ module ApplicationHelper
       "#{base_titre} | #{@titre}"
     end
   end
+
+  def pseudo
+    base_pseudo = "Welcome"
+    if @pseudo.nil?
+      base_pseudo
+    else
+      "#{base_pseudo} : #{@pseudo}"
+    end
+  end
 end
