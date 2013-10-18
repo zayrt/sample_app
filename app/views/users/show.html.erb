@@ -4,10 +4,19 @@
     <section>
       <%= gravatar_for @user %>
       <span class="welcome">Welcome to the Sample App : </span>
-      <span class="pseudo"> <%= @user.name %>!</span> 
+      <span class="pseudo"> <%= @user.name %> <%= @user.admin %>!</span> 
       <p>
-      Voici la liste des membres : 
-      <%= @user_all.join(", ") %> </p>
+	Voici la liste des membres : 
+	<%= @user_all.join(", ") %> </p>
     </section>
   </aside>
+  <div class="span8">
+    <% if @user.microposts.any? %>
+    <h3>Microposts (<%= @user.microposts.count %>)</h3>
+    <ol class="microposts">
+      <%= render @microposts %>
+    </ol>
+    <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 </div>

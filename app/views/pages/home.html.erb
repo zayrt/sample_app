@@ -1,3 +1,20 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
 <h1>Bienvenue !</h1><br/>
 <p>Cool non?? c'est encore un peu vide je vous l'accorde</p>
 <%= link_to "S'inscrire !", signup_path, :class =>"signup_button round"%>
+<% end %>

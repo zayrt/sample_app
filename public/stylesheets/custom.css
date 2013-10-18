@@ -153,17 +153,49 @@ aside {
     color: red;
 }
 
-.welcome
-{
-    font-size: 150%;
-    color: green;
-    background-color: #B4FFA3;
-    border-radius: 8px;
-}
-
 .pseudo
 {
     font-size: 150%;
     color: #FF0004;
     text-decoration: underline;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+  font-weight : bold;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
