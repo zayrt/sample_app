@@ -193,9 +193,51 @@ aside {
   float: left;
   margin-right: 10px;
 }
+
 aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
+.relationship
+{
+    display: block;
+    color: azur;
+    background-color: azur;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 10px;
+    border-left: 1px solid $grayLighter;
+    border-radius: 30px;
 }

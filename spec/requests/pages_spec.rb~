@@ -1,0 +1,11 @@
+require 'spec_helper'
+
+describe "Pages" do
+  describe "Home page" do
+
+    it "should have the content 'accueil'" do
+      visit '/'
+      expect(page).to have_content('Accueil')
+    end
+  end
+end

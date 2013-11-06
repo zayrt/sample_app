@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user,        only:   [:index, :edit, :update, :destroy]
+  before_action :signed_in_user,        only:   [:index, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user,  only:   [:edit, :update]
   before_action :admin_user,    only:   :destroy
   
@@ -26,15 +26,17 @@ class UsersController < ApplicationController
     @all_users = Array.new
     nb_users = User.count + 1
     while (i < nb_users)
-      if current_user !=  User.find(i).name
-        @all_users[i2] = User.find(i).name
-        i2 += 1
+      if defined? User.find(i) != nil && current_user != User.find(i)
+        if defined? User.find(i) != nil
+          @all_users[i2] = User.find(i).name
+          i2 += 1
+        end
       end
       i += 1
     end
     return @all_users
   end
-
+  
   def new
     @titre = "Sign up"
     @user = User.new
@@ -66,7 +68,21 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-    
+
+  def following
+    @titre = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @titre = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
   private
   
   def user_params

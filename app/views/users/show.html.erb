@@ -3,14 +3,19 @@
   <aside class="span4">
     <section>
       <%= gravatar_for @user %>
-      <span class="welcome">Welcome to the Sample App : </span>
-      <span class="pseudo"> <%= @user.name %> <%= @user.admin %>!</span> 
+      <h1>Welcome to the Sample App : 
+	<%= @user.name %>!</h1> 
       <p>
 	Voici la liste des membres : 
 	<%= @user_all.join(", ") %> </p>
     </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
   </aside>
   <div class="span8">
+    <%= render 'follow_form' if signed_in? %>
+    </br>
     <% if @user.microposts.any? %>
     <h3>Microposts (<%= @user.microposts.count %>)</h3>
     <ol class="microposts">
